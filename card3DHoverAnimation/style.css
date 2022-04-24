@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #090221;
+}
+
+.cards {
+    perspective: 500px;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    background: url("./images/pic1.jpg") center no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+}
+
+.card:hover {
+    transform: translateZ(10px) rotateX(20deg) rotateY(30deg);
+}
+
+.card-title {
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+}
+
+.card:hover .card-title {
+    transform: translateZ(50px);
+}
